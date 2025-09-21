@@ -1,11 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Oles Feier</title>
-</head>
-<body>
-  <h1>Oles Feier</h1>
-</body>
+<html>
+  <head>
+    <style>
+      h1 {
+        color: darkblue;
+      }
+      h2 {
+        color: green;
+      }
+      h5 {
+        font-size: 20px;
+      }
+      h4 {
+        font-size: 20px;
+      }
+      h3 {
+        font-size: 20px;
+      }
+      h6 {
+        font-size: 30px;
+      }
+      li {
+        color: lightseagreen;
+      }
+      h3 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>OLEs geburstag</h1>
+    <h2>Gästeliste</h2>
+
+    <button
+      onclick="confetti({shapes:['confetti'],particleCount: zahl(20,500),
+          spread: zahl(30,360),})"
+    >
+      Konfetti
+    </button>
+
+    <ol>
+      <li>Simon</li>
+      <li>Jonas</li>
+      <li>Silke</li>
+      <li>Wollfram</li>
+      <li>Johannes</li>
+      <li>David</li>
+      <li>Meike</li>
+      <li>Miley</li>
+      <li>Samuel</li>
+      <li>Caro</li>
+      <li>Paulina</li>
+    </ol>
+    <h3>Datum:28.9.25</h3>
+    <h4>Uhrzeit 13:00 Uhr</h4>
+    <h5>Ort: wallstraße 23 Schöningen</h5>
+
+    <a href="/seite3.html">zu seite zwei </a>
+
+    <h6>Wunschliste</h6>
+
+    <ol>
+      <li>Lötkolben</li>
+      <li>Lötmaterial</li>
+      <li>fünf kleine glühbirnen</li>
+      <li>geld/gutscheine</li>
+      <li>kombi zange</li>
+      <li>Ein modelflugzeug</li>
+    </ol>
+    <script src="
+    https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js
+    "></script>
+    <script>
+      function zahl(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+      window.onload = function () {
+        confetti({
+          particleCount: 500,
+          spread: 300,
+        });
+      };
+    </script>
+  </body>
 </html>
